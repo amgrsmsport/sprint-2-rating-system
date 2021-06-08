@@ -8,6 +8,11 @@ import { AboutUs } from "./components/AboutUs";
 import { Register } from "./components/Register";
 import { Login } from "./components/Login";
 import { AppNavBar } from "./Common/AppNavBar";
+import { UserLogin } from "./components/UserLogin";
+
+import { EmployeeUpsert } from "./components/EmployeeUpsert";
+import { EmployeeList } from "./components/EmployeeList";
+
 import {
   Button,
   Form,
@@ -43,7 +48,14 @@ function App() {
         </Route>
 
         <Route path="/login">
-          <Login />
+          <UserLogin />
+        </Route>
+
+        <Route path="/employeeupsert">
+          <EmployeeUpsert />
+        </Route>
+        <Route path="/employeelist">
+          <EmployeeList />
         </Route>
 
         <Route path="/">
