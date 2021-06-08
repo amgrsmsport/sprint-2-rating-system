@@ -40,15 +40,17 @@ export const UserLogin = () => {
   }
 
   return (
-    <div>
+    <div className="bg-info" style={{ height: "100vh" }}>
       {/* <AppNavBar /> */}
       <div className="row">
         <div className="col-3 col-md-3 d-none d-md-block"></div>
         <div className="col-12 col-md-6">
-          <h3 className="alert alert-secondary mb-4">User Login</h3>
+          <h3 className="alert alert-secondary mb-4 mt-2 d-flex justify-content-center">
+            User Login
+          </h3>
 
           {state.UserLogin.loginAction === false && errorOperation && (
-            <div className="alert alert-danger">login failure</div>
+            <div className="alert alert-success">login success</div>
           )}
 
           <div className="mb-2">

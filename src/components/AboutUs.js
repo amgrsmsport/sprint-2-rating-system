@@ -4,7 +4,7 @@ export function AboutUs() {
       <h1 className="text-dark" style={{ fontFamily: "cursive" }}>
         About Us
       </h1>
-      <p>
+      <p className="m-3" style={{ textAlign: "justify" }}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ut illo
         id in repudiandae cum eius repellat dolorem totam ea, autem laboriosam
         velit, exercitationem earum provident culpa modi molestias. Deleniti

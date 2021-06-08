@@ -6,15 +6,15 @@ import { useSelector } from "react-redux";
 import { UserRegisterAction } from "../redux/UserRegisterReducer";
 import { useRef, useState } from "react";
 
-export function Registration() {
+export function orgRegistration() {
   const state = useSelector((state) => state);
   const dispatch = useDispatch();
   const history = useHistory();
   const formEL = useRef();
 
   const [successOperation, setSuccessOperation] = useState(false);
-  const [name, setName] = useState("");
-  const [password, setPassword] = useState("");
+  const [orgName, setOrgName] = useState("");
+  const [, setPassword] = useState("");
   const [userEmail, setUserEmail] = useState("");
   const [mobile, setMobile] = useState("");
 
@@ -56,15 +56,13 @@ export function Registration() {
   // THIS IS REDUX ACTION CALLING
 
   return (
-    <div className="bg-info" style={{ height: "100vh" }}>
+    <div>
       {/* <AppNavBar /> */}
 
-      <div className="row ">
+      <div className="row">
         <div className="col-3 col-md-3 d-none d-md-block"></div>
         <div className="col-12 col-md-6">
-          <h3 className="alert alert-secondary mt-2 d-flex justify-content-center">
-            Register
-          </h3>
+          <h3 className="alert alert-secondary">Register</h3>
 
           {successOperation && (
             <div className="alert alert-success">Opeation Success</div>
@@ -122,7 +120,7 @@ export function Registration() {
             <div>
               <Button
                 variant="outline-dark"
-                className="w-100 mb-3 btn btn-dark text-light"
+                className="w-100 mb-3"
                 onClick={(e) => RegisterUser(e)}
               >
                 Register
