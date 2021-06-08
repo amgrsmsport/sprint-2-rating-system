@@ -12,17 +12,16 @@ export function Registration() {
   const history = useHistory();
   const formEL = useRef();
 
-  const [userName, setUserName] = useState("");
-  const [userPassword, setUserPassword] = useState("");
+  const [successOperation, setSuccessOperation] = useState(false);
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
   const [userEmail, setUserEmail] = useState("");
-  const [userNumber, setUserNumber] = useState("");
-  const [userAdhaar, setUserAdhaar] = useState("");
+  const [mobile, setMobile] = useState("");
 
-  const updateUserName = (e) => setUserName(e.target.value);
-  const updateUserPassword = (e) => setUserPassword(e.target.value);
+  const updateName = (e) => setName(e.target.value);
+  const updatePassword = (e) => setPassword(e.target.value);
   const updateUserEmail = (e) => setUserEmail(e.target.value);
-  const updateUserNumber = (e) => setUserNumber(e.target.value);
-  const updateUserAdhaar = (e) => setUserAdhaar(e.target.value);
+  const updateMobile = (e) => setMobile(e.target.value);
 
   const RegisterUser = (e) => {
     e.preventDefault();
@@ -35,23 +34,22 @@ export function Registration() {
     } else {
       dispatch(
         UserRegisterAction({
-          userAdhaar,
-          userNumber,
-          userName,
+          mobile,
+          name,
           userEmail,
-          userPassword,
+          password,
         })
       );
 
-      // A2: navigate to another page
-      // history.push("/list-employee");
+      //success alert
+      setSuccessOperation(true);
+      setTimeout(() => setSuccessOperation(false), 5000);
 
       // reset the form
-      setUserName("");
-      setUserPassword("");
+      setName("");
+      setPassword("");
       setUserEmail("");
-      setUserNumber("");
-      setUserAdhaar("");
+      setMobile("");
     }
   };
 
@@ -59,22 +57,27 @@ export function Registration() {
 
   return (
     <div>
-      <AppNavBar />
+      {/* <AppNavBar /> */}
 
       <div className="row">
         <div className="col-3 col-md-3 d-none d-md-block"></div>
         <div className="col-12 col-md-6">
           <h3 className="alert alert-secondary">Register</h3>
+
+          {successOperation && (
+            <div className="alert alert-success">Opeation Success</div>
+          )}
+
           <form ref={formEL} class="needs-validation" novalidate>
             <div className="form-group">
               <input
                 type="text"
                 className="form-control"
                 placeholder="Enter Name"
-                value={userName}
-                onChange={(e) => updateUserName(e)}
+                value={name}
+                onChange={(e) => updateName(e)}
                 minLength="4"
-                maxLength="10"
+                maxLength="20"
                 required
               />
             </div>
@@ -95,22 +98,10 @@ export function Registration() {
                 type="number"
                 className="form-control"
                 placeholder="Enter Mobile"
-                value={userNumber}
-                onChange={(e) => updateUserNumber(e)}
+                value={mobile}
+                onChange={(e) => updateMobile(e)}
                 min="999999999"
                 max="9999999999"
-                required
-              />
-            </div>
-
-            <div className="form-group">
-              <input
-                type="number"
-                className="form-control"
-                placeholder="Enter Adhaar"
-                value={userAdhaar}
-                onChange={(e) => updateUserAdhaar(e)}
-                min="9999999999"
                 required
               />
             </div>
@@ -120,8 +111,8 @@ export function Registration() {
                 type="password"
                 className="form-control"
                 placeholder="Enter password"
-                value={userPassword}
-                onChange={(e) => updateUserPassword(e)}
+                value={password}
+                onChange={(e) => updatePassword(e)}
                 required
               />
             </div>
@@ -135,14 +126,14 @@ export function Registration() {
                 Register
               </Button>
             </div>
-            <div>
+            {/* <div>
               <input
                 type="button"
                 className="btn btn-outline-dark w-100"
                 value="Login"
                 onClick={() => history.push("/userlogin")}
               />
-            </div>
+            </div> */}
           </form>
         </div>
         <div className="col-3 col-md-3  d-none d-md-block"></div>

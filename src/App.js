@@ -9,6 +9,7 @@ import { Register } from "./components/Register";
 import { Login } from "./components/Login";
 import { AppNavBar } from "./Common/AppNavBar";
 import { UserLogin } from "./components/UserLogin";
+import { Registration } from "./components/Registration";
 
 import { EmployeeUpsert } from "./components/EmployeeUpsert";
 import { EmployeeList } from "./components/EmployeeList";
@@ -44,7 +45,7 @@ function App() {
         </Route>
 
         <Route path="/register">
-          <Register />
+          <Registration />
         </Route>
 
         <Route path="/login">
