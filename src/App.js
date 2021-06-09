@@ -75,6 +75,13 @@ function App() {
 
         <Route path="/">
           <Home />
+          <div>
+            {/* <h1 className="bg-dark text-light p-2 sticky-top d-flex justify-content-center ">
+        Welcome to Financial Rating
+      </h1> */}
+
+            <CarouselContainer />
+          </div>
         </Route>
       </Switch>
     </Router>

@@ -9,6 +9,10 @@ import {
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import logo from "./../holder/fors.png";
+import HomeIcon from "@material-ui/icons/Home";
+import InfoIcon from "@material-ui/icons/Info";
+import AccountBalanceIcon from "@material-ui/icons/AccountBalance";
+import PersonAddIcon from "@material-ui/icons/PersonAdd";
 
 export function AppNavBar() {
   return (
@@ -22,8 +26,8 @@ export function AppNavBar() {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
-          <Nav.Link as={Link} to="/home" className="h5">
-            Home
+          <Nav.Link as={Link} to="/home" className="h5 text-light">
+            <HomeIcon></HomeIcon> Home
           </Nav.Link>
 
           {/* <Nav.Link as={Link} to="/register" className="h5">
@@ -38,29 +42,35 @@ export function AppNavBar() {
             </NavDropdown.Item>
           </NavDropdown> */}
 
+          <Nav.Link as={Link} to="/about-us" className="h5 text-light">
+            <InfoIcon></InfoIcon> About Us
+          </Nav.Link>
+
           <Dropdown>
             <Dropdown.Toggle
               id="dropdown-button-dark-example1"
               variant="secondary"
+              className="text-light m-1"
             >
               Register
             </Dropdown.Toggle>
 
             <Dropdown.Menu variant="dark">
               <Dropdown.Item as={Link} to="/register" active>
-                User
+                <PersonAddIcon></PersonAddIcon> User
               </Dropdown.Item>
               <Dropdown.Divider />
               <Dropdown.Item as={Link} to="/orgregister">
-                Organization{" "}
+                <AccountBalanceIcon></AccountBalanceIcon> Organization{" "}
               </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
 
-          <Nav.Link as={Link} to="/about-us" className="h5">
-            About Us
-          </Nav.Link>
-          <Nav.Link as={Link} to="/login" className="h5 btn btn-primary">
+          <Nav.Link
+            as={Link}
+            to="/login"
+            className="h5 btn btn-primary text-light "
+          >
             Login
           </Nav.Link>
         </Nav>
