@@ -34,7 +34,7 @@ export const UserLogin = () => {
   };
 
   if (state.UserLogin.loginAction === true) {
-    history.push("/user");
+    history.push("/organizationrating");
 
     return <div></div>;
   }
@@ -50,7 +50,7 @@ export const UserLogin = () => {
           </h3>
 
           {state.UserLogin.loginAction === false && errorOperation && (
-            <div className="alert alert-success">login success</div>
+            <div className="alert alert-danger">login failed</div>
           )}
 
           <div className="mb-2">
@@ -76,7 +76,7 @@ export const UserLogin = () => {
           <div className="mb-2">
             <input
               type="button"
-              className="btn btn-outline-dark w-100"
+              className="btn btn-outline-dark w-100 btn-dark text-light"
               value="Login"
               onClick={() => UserLoginFunction()}
             />

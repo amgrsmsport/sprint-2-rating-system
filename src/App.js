@@ -13,7 +13,8 @@ import { Registration } from "./components/Registration";
 
 import { EmployeeUpsert } from "./components/EmployeeUpsert";
 import { EmployeeList } from "./components/EmployeeList";
-
+import { OrganizationRating } from "./components/Organization";
+import { Feedback } from "./components/Feedback";
 import {
   Button,
   Form,
@@ -57,6 +58,14 @@ function App() {
         </Route>
         <Route path="/employeelist">
           <EmployeeList />
+        </Route>
+
+        <Route path="/organizationrating">
+          <OrganizationRating />
+        </Route>
+
+        <Route path="/feedback">
+          <Feedback />
         </Route>
 
         <Route path="/">
