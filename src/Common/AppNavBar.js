@@ -1,4 +1,5 @@
 import {
+  Dropdown,
   Button,
   Form,
   FormControl,
@@ -29,13 +30,32 @@ export function AppNavBar() {
             Register
           </Nav.Link> */}
 
-          <NavDropdown title="Register" id="basic-nav-dropdown">
+          {/* <NavDropdown title="Register" id="basic-nav-dropdown">
             <NavDropdown.Item href="/register">User</NavDropdown.Item>
             <NavDropdown.Divider />
             <NavDropdown.Item href="/orgregister">
               Organization
             </NavDropdown.Item>
-          </NavDropdown>
+          </NavDropdown> */}
+
+          <Dropdown>
+            <Dropdown.Toggle
+              id="dropdown-button-dark-example1"
+              variant="secondary"
+            >
+              Register
+            </Dropdown.Toggle>
+
+            <Dropdown.Menu variant="dark">
+              <Dropdown.Item as={Link} to="/register" active>
+                User
+              </Dropdown.Item>
+              <Dropdown.Divider />
+              <Dropdown.Item as={Link} to="/orgregister">
+                Organization{" "}
+              </Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
 
           <Nav.Link as={Link} to="/about-us" className="h5">
             About Us

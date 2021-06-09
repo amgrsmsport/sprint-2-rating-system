@@ -34,6 +34,9 @@ export function AboutUs() {
         {" "}
         <strong>Email:</strong> financialrating@outlook.com
       </p>
+      <div>
+        <strong>Contact:</strong> +91 84444499663
+      </div>
     </div>
   );
 }
