@@ -15,6 +15,7 @@ import { EmployeeUpsert } from "./components/EmployeeUpsert";
 import { EmployeeList } from "./components/EmployeeList";
 import { OrganizationRating } from "./components/Organization";
 import { Feedback } from "./components/Feedback";
+import { OrgRegistration } from "./components/OrgRegister";
 import {
   Button,
   Form,
@@ -66,6 +67,10 @@ function App() {
 
         <Route path="/feedback">
           <Feedback />
+        </Route>
+
+        <Route path="/orgregister">
+          <OrgRegistration />
         </Route>
 
         <Route path="/">

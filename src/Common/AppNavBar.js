@@ -25,9 +25,18 @@ export function AppNavBar() {
             Home
           </Nav.Link>
 
-          <Nav.Link as={Link} to="/register" className="h5">
+          {/* <Nav.Link as={Link} to="/register" className="h5">
             Register
-          </Nav.Link>
+          </Nav.Link> */}
+
+          <NavDropdown title="Register" id="basic-nav-dropdown">
+            <NavDropdown.Item href="/register">User</NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item href="/orgregister">
+              Organization
+            </NavDropdown.Item>
+          </NavDropdown>
+
           <Nav.Link as={Link} to="/about-us" className="h5">
             About Us
           </Nav.Link>
