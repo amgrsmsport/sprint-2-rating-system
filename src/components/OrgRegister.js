@@ -165,7 +165,7 @@ export function OrgRegistration() {
                 // placeholder=""
                 value={orgVideokyc}
                 onChange={(e) => updateOrgVideokyc(e)}
-                required
+                //required
               />
             </div>
 
@@ -177,7 +177,7 @@ export function OrgRegistration() {
                 // placeholder=""
                 value={creditCard}
                 onChange={(e) => updateCreditCard(e)}
-                required
+                //required
               />
             </div>
 

@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { AppNavBar } from "../Common/AppNavBar";
 import { UserLoginAction } from "../redux/UserLoginReducer";
+
 export const UserLogin = () => {
   const dispatch = useDispatch();
   const history = useHistory();
@@ -78,7 +79,8 @@ export const UserLogin = () => {
               type="button"
               className="btn btn-outline-dark w-100 btn-dark text-light"
               value="Login"
-              onClick={() => UserLoginFunction()}
+              //onClick={() => UserLoginFunction()
+              onClick={() => history.push("/organizationrating")}
             />
           </div>
         </div>

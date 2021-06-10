@@ -12,9 +12,6 @@ const rootReducer = combineReducers({
   UserLogin: UserLoginReducer,
   UserRegister: UserRegisterReducer,
   OrgRegister: OrgRegisterReducer,
-
-  // depart : DepartRducer,
-  //vechil: VechuileReucer
 });
 
 // const store = createStore(rootReducer);
