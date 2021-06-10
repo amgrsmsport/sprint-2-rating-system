@@ -28,11 +28,10 @@ import {
 function App() {
   return (
     <Router>
-      <AppNavBar />
-
       <Switch>
         <Route path="/home">
           <Home />
+          <AppNavBar />
           <div>
             {/* <h1 className="bg-dark text-light p-2 sticky-top d-flex justify-content-center ">
         Welcome to Financial Rating
@@ -43,6 +42,7 @@ function App() {
         </Route>
 
         <Route path="/about-us">
+          <AppNavBar />
           <AboutUs />
         </Route>
 
@@ -75,6 +75,7 @@ function App() {
 
         <Route path="/">
           <Home />
+          <AppNavBar />
           <div>
             {/* <h1 className="bg-dark text-light p-2 sticky-top d-flex justify-content-center ">
         Welcome to Financial Rating

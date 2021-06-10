@@ -1,6 +1,7 @@
 import { Button } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
-import { AppNavBar } from "../Common/AppNavBar";
+import { UserRegNavBar } from "../Common/AppNavBar";
+
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { UserRegisterAction } from "../redux/UserRegisterReducer";
@@ -57,13 +58,13 @@ export function Registration() {
 
   return (
     <div className="bg-info" style={{ height: "100vh" }}>
-      {/* <AppNavBar /> */}
+      <UserRegNavBar></UserRegNavBar>
 
       <div className="row ">
         <div className="col-3 col-md-3 d-none d-md-block"></div>
         <div className="col-12 col-md-6">
           <h3 className="alert alert-secondary mt-2 d-flex justify-content-center">
-            Register
+            User Register
           </h3>
 
           {successOperation && (

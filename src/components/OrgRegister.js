@@ -1,6 +1,7 @@
 import { Button } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 import { AppNavBar } from "../Common/AppNavBar";
+import { OrgRegNavBar } from "../Common/AppNavBar";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { OrgRegisterAction } from "../redux/OrgRegisterReducer";
@@ -96,6 +97,7 @@ export function OrgRegistration() {
   return (
     <div className="bg-info" style={{ height: "100vh" }}>
       {/* <AppNavBar /> */}
+      <OrgRegNavBar></OrgRegNavBar>
 
       <div className="row ">
         <div className="col-3 col-md-3 d-none d-md-block"></div>
